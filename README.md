@@ -95,7 +95,7 @@ uv run python scripts/list_clean_codeforces.py --split train
 ```
 `list_clean_codeforces.py --split train` lists every Train problem. Use `dev` or `test` for the other splits. Each line has the id, rating, number of official tests, number of submissions, number accepted, and one cell per small model.
 
-
+```bash
 uv run python scripts/list_clean_codeforces.py --split dev --problem 26/A
 ```
 `list_clean_codeforces.py --split dev --problem 26/A` lists that problem's submissions: the submission id, the Codeforces verdict, and how many tests Codeforces counted as passed. It does not print the program. Add `--source 101817015` to print that one program. The id has to belong to the problem.
