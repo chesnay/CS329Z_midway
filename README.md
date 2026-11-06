@@ -126,6 +126,12 @@ The example is Codeforces 630/A, "Again Twenty Five!", starting from rejected su
 
 First, inspect each component of `data/example_code/harbor_tasks/demo/train/630_A__230389330`:
 
+We need to cd to the directory `data/example_code/harbor_tasks/demo/train/630_A__230389330`.
+```bash
+cd data/example_code/harbor_tasks/demo/train/630_A__230389330
+```
+
+
 ```text
 630_A__230389330/
   task.toml                  metadata, the split, and the time limits
