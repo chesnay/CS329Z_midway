@@ -124,13 +124,9 @@ The score files are `result.json` inside each `data/example_code/harbor_jobs/<jo
 
 The example is Codeforces 630/A, "Again Twenty Five!", starting from rejected submission 230389330. It is the smallest of the three included tasks. `630/C` and `825/A` use the same layout.
 
-First, inspect each component of `data/example_code/harbor_tasks/demo/train/630_A__230389330`:
+First, inspect each component of `data/example_code/harbor_tasks/demo/train/630_A__230389330` to understand the structure of the program:
 
-We need to cd to the directory `data/example_code/harbor_tasks/demo/train/630_A__230389330`.
-```bash
-cd data/example_code/harbor_tasks/demo/train/630_A__230389330
-```
-
+![Tree](docs/tree.png)
 
 ```text
 630_A__230389330/
