@@ -1,0 +1,30 @@
+[project]
+name = "tagent"
+version = "0.1.0"
+description = "Research system for studying adaptive teacher-agent feedback in programming instruction."
+requires-python = ">=3.12"
+
+dependencies = [
+    "anthropic>=1.13.0",
+    "datasets>=5.1.0",
+    # Same Harbor pin as assignment2-harness, so `uv run harbor` works here.
+    "harbor==0.18.0",
+    "pandas>=3.0.6",
+    "pyarrow>=26.0.0",
+    "tqdm>=4.70.1",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
+
+[tool.uv]
+# Same constraints as assignment2-harness. litellm 1.106.x crashes on import
+# without mcp, and only filelock>=4.2.1 is free of known advisories.
+constraint-dependencies = ["litellm==1.105.7"]
+override-dependencies = ["filelock==4.2.6"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

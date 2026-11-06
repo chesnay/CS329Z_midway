@@ -1,0 +1,36 @@
+schema_version = "1.3"
+artifacts = []
+
+[task]
+name = "codeforces/825_A__63054990"
+description = "Repair Codeforces 825/A starting from submission 63054990"
+authors = [{ name = "Codeforces authors" }, { name = "Tagent export", role = "Harbor port" }]
+keywords = ["codeforces", "python", "repair", "implementation"]
+
+[metadata]
+difficulty = 1100
+category = "repair"
+source = "open-r1/codeforces"
+source_task_id = "825/A"
+faulty_submission_id = "63054990"
+faulty_verdict = "WRONG_ANSWER"
+split = "train"
+
+[verifier]
+timeout_sec = 60.0
+collect = []
+
+[verifier.env]
+
+[agent]
+timeout_sec = 600.0
+
+[environment]
+network_mode = "public"
+build_timeout_sec = 600.0
+os = "linux"
+mcp_servers = []
+
+[environment.env]
+
+[solution.env]
