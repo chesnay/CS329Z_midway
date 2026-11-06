@@ -23,9 +23,12 @@ Replaying the full Train, Dev, and Test jobs is not part of this checkout. Those
 
 ## Clone the repository
 
-Run every later command from the repository root, the directory that contains `pyproject.toml`. If you already have this directory, skip the clone.
+```bash
+git clone git@github.com:chesnay/CS329Z_midway.git
+cd CS329Z_midway
+```
 
-A classmate clones the private GitHub repository submitted for this midpoint and enters the directory it creates. That directory is named `CS329Z_midway`.
+Run every later command from that directory. If you already have this checkout, skip the clone.
 
 ## Add an API key
 
