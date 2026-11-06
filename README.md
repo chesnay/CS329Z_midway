@@ -255,6 +255,20 @@ This model is larger than the three above, so one attempt on three tasks costs m
 | `tests/` | the verifier, after the model stops: the official tests |
 | `solution/solution.py` | Harbor's oracle only: one accepted program, not shown to the student |
 
+## Harbor logging the experiments
+A Harbor run writes data/example code/harbor jobs/<job-name>/result.json
+and, inside each trial, `verifier/reward.txt`. That file is 1 when every official test passed
+and 0 otherwise. The terminal table reports the same reward. A reward of 0 for Llama 3.2 1B on
+these problems is a normal outcome, not a failed installation. The reference-solution run on 630/A
+should report a reward of 1.0. Finished logs can be browsed with uv run harbor view
+data/example code/harbor jobs, which serves a page on <http://127.0.0.1:8080>.
+The per-trial logs of the original study are not in the repository. A new run writes its own log locally.
+Do not commit that log.
+
+```bash
+uv run harbor view data/example_code/harbor_jobs
+```
+
 ## What this checkout does not rerun
 
 `scripts/run_rest_train.py` is the program that built the full jobs in the original repository. It reads case files, split lists, and the unfiltered official subset, and it calls Qwen3-Coder before the small models. Those inputs are not here. Do not use it to reproduce the table.
