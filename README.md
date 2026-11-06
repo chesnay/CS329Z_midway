@@ -168,7 +168,7 @@ Browse that log, and the saved score files, on your own machine:
 uv run harbor view data/example_code/harbor_jobs
 ```
 
-Open the address it prints, usually `http://127.0.0.1:8080`. Stop the viewer with Ctrl-C.
+Open the address it prints, for example <http://127.0.0.1:8081>. Stop the viewer with Ctrl-C.
 
 The three demo tasks do include an accepted program, so you can grade that program without calling a model. `--agent oracle` runs `solution/solve.sh`, which copies `solution/solution.py` over `/app/solution.py`, and then the same tests run. Use `--job-name demo-oracle`. That check does not read `.env`. It is not available for the other 456 problems, because those problems were not exported as Harbor tasks.
 
