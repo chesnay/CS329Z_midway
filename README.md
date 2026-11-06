@@ -126,7 +126,7 @@ The example is Codeforces 630/A, "Again Twenty Five!", starting from rejected su
 
 First, inspect each component of `data/example_code/harbor_tasks/demo/train/630_A__230389330` to understand the structure of the program:
 
-![Tree](docs/tree.png)
+<img src="docs/tree.png" alt="Tree" width="50%" />
 
 ```text
 630_A__230389330/
