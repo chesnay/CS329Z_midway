@@ -82,19 +82,27 @@ No key and no Docker. The first command checks the code. The second summarizes e
 
 ```bash
 uv run pytest
-uv run python scripts/summarize_clean_codeforces.py
-uv run python scripts/list_clean_codeforces.py --split train
-uv run python scripts/list_clean_codeforces.py --split dev --problem 26/A
-uv run python scripts/show_clean_runs.py --split dev --problem 26/A
 ```
-
 `pytest` checks the formula repair and the rule that keeps a problem only when Qwen3-Coder passed.
 
+```bash
+uv run python scripts/summarize_clean_codeforces.py
+```
 `summarize_clean_codeforces.py` prints the dataset counts and the small-model results for Train, Dev, and Test.
 
+```bash
+uv run python scripts/list_clean_codeforces.py --split train
+```
 `list_clean_codeforces.py --split train` lists every Train problem. Use `dev` or `test` for the other splits. Each line has the id, rating, number of official tests, number of submissions, number accepted, and one cell per small model.
 
+
+uv run python scripts/list_clean_codeforces.py --split dev --problem 26/A
+```
 `list_clean_codeforces.py --split dev --problem 26/A` lists that problem's submissions: the submission id, the Codeforces verdict, and how many tests Codeforces counted as passed. It does not print the program. Add `--source 101817015` to print that one program. The id has to belong to the problem.
+
+```bash
+uv run python scripts/show_clean_runs.py --split dev --problem 26/A
+```
 
 `show_clean_runs.py --split dev --problem 26/A` prints only the small-model scores for that problem. Leave out `--problem` to print the whole split.
 
