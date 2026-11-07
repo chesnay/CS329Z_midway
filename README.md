@@ -55,7 +55,17 @@ Once it is installed, take some time to make sure you understand Docker and thes
 - An image is the built snapshot. `ubuntu:22.04` is one image. The image built from a task Dockerfile is another.
 - A container is one running instance of an image. Harbor starts a container for each attempt, runs the agent in it, then runs the verifier.
 
-Pull the `ubuntu:22.04` image. That download checks that Docker can fetch an image. The demo tasks do not use this image. Harbor builds their image from `environment/Dockerfile` when you run a task.
+Launch Docker Desktop (Mac/Windows) and wait until it reports the engine is running.
+From Terminal you can also do: 
+```bash
+open -a Docker
+```
+Confirm it’s ready:
+```Bash
+docker info
+```
+
+Then run the verification pull the `ubuntu:22.04` image. That download checks that Docker can fetch an image. The demo tasks do not use this image. Harbor builds their image from `environment/Dockerfile` when you run a task.
 
 ```bash
 docker pull ubuntu:22.04
